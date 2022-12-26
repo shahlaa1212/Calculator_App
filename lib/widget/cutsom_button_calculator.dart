@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'custom_title.dart';
 
 Widget ButtonCalcutor(
-    String btnText,
-    Color color,
-    Color colorNumber,
-    int num,
+{
+    required String btnText,
+    required Color colorButton,
+    required Color colorNumber,
+    required int num,
+ }
 )
 {
   Container container;
@@ -15,8 +17,8 @@ Widget ButtonCalcutor(
       padding: EdgeInsets.only(bottom: 20),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: color,
-          padding: EdgeInsets.only(left: 80, top: 20, right: 80, bottom: 20),
+          primary: colorButton,
+          padding: EdgeInsets.only(left: 70, top: 20, right: 70, bottom: 20),
           shape: StadiumBorder(),
         ),
         onPressed: () {},
@@ -24,7 +26,7 @@ Widget ButtonCalcutor(
             btnText: btnText,
             colorNumber: colorNumber,
             fontSize: 30.0
-        ),
+        )
       ),
     );
   }
@@ -33,7 +35,7 @@ Widget ButtonCalcutor(
       padding: EdgeInsets.only(bottom: 20),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: color,
+          primary: colorButton,
           padding: EdgeInsets.all(15),
           shape: CircleBorder(),
         ),

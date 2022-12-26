@@ -40,7 +40,7 @@ class _CalculatorScreen extends State<CalculatorScreen>{
                           colorNumber: AppColor.whiteColor,
                           fontSize: 60.0 ,
                           maxlines: 1,
-                          textAlign: TextAlign.right
+                          textAlign: TextAlign.right,
                       ),
                   ),
                 ],
@@ -49,45 +49,154 @@ class _CalculatorScreen extends State<CalculatorScreen>{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonCalcutor("C", AppColor.specialButtonColor, Colors.black, 1),
-                ButtonCalcutor("+/-", AppColor.specialButtonColor, Colors.black, 1),
-                ButtonCalcutor("%", AppColor.specialButtonColor, Colors.black, 1),
-                ButtonCalcutor("/", AppColor.secondaryButtonColor, AppColor.blacktColor, 1),
+                ButtonCalcutor(
+                    btnText: "C",
+                    colorButton:AppColor.specialButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num:1,
+                ),
+
+                ButtonCalcutor(
+                    btnText: "+/-",
+                    colorButton:AppColor.specialButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num:1,
+                ),
+
+                ButtonCalcutor(
+                    btnText: "%",
+                    colorButton:AppColor.specialButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num:1,
+                ),
+
+                ButtonCalcutor(
+                    btnText: "/",
+                    colorButton:AppColor.secondaryButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num:1,
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonCalcutor("7", AppColor.numbersButtonColor, AppColor.whiteColor, 1),
-                ButtonCalcutor("8", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("9", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("X", AppColor.secondaryButtonColor,AppColor.blacktColor, 1)
+                ButtonCalcutor(
+                    btnText:"7",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"8",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"9",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num:1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"X",
+                    colorButton:AppColor.secondaryButtonColor,
+                    colorNumber: AppColor.blacktColor,
+                    num:1,
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonCalcutor("4", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("5", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("6", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("-", AppColor.secondaryButtonColor,Colors.black, 1),
+                ButtonCalcutor(
+                    btnText: "4",
+                    colorButton:AppColor.numbersButtonColor ,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText: "5",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText: "6",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"-",
+                    colorButton:AppColor.secondaryButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num: 1,
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonCalcutor("1", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("2", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("3", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("+", AppColor.secondaryButtonColor,Colors.black, 1),
+                ButtonCalcutor(
+                    btnText:"1",
+                    colorButton: AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"2",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber:AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"3",
+                    colorButton:AppColor.numbersButtonColor,
+                    colorNumber: AppColor.whiteColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                    btnText:"+",
+                    colorButton:AppColor.secondaryButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num:1,
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonCalcutor("0", Color(0xffa5a5a5),Colors.black, 0),
-                ButtonCalcutor(".", Color(0xffa5a5a5),Colors.black, 1),
-                ButtonCalcutor("=", AppColor.secondaryButtonColor,Colors.black, 1),
+                ButtonCalcutor(
+                    btnText:"0",
+                    colorButton:AppColor.specialButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num:0,
+                ),
+
+                ButtonCalcutor(
+                    btnText:".",
+                    colorButton:AppColor.specialButtonColor,
+                    colorNumber:AppColor.blacktColor,
+                    num: 1,
+                ),
+
+                ButtonCalcutor(
+                   btnText:"=",
+                   colorButton:AppColor.secondaryButtonColor,
+                   colorNumber:AppColor.blacktColor,
+                   num:1,
+                ),
               ],
             ),
           ],
