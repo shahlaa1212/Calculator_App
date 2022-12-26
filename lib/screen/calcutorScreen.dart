@@ -1,5 +1,6 @@
 import 'package:calculator_app/utils/color.dart';
 import 'package:flutter/material.dart';
+import '../widget/custom_title.dart';
 import '../widget/cutsom_button_calculator.dart';
 
 class CalculatorScreen extends StatefulWidget{
@@ -23,25 +24,23 @@ class _CalculatorScreen extends State<CalculatorScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      backgroundColor: Colors.black,
+      backgroundColor: AppColor.blacktColor,
       body: Container(
         margin: EdgeInsets.only(bottom: 30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              padding: EdgeInsets.only(right: 40 ,bottom: 30),
+              padding: EdgeInsets.only(right: 40, bottom: 30),
               child: Row(
                 children: [
                   Expanded(
-                      child: Text(
-                        text,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 60,
-                        ),
-                        maxLines: 1,
-                        textAlign: TextAlign.right,
+                      child: custom_title(
+                          btnText: text,
+                          colorNumber: AppColor.whiteColor,
+                          fontSize: 60.0 ,
+                          maxlines: 1,
+                          textAlign: TextAlign.right
                       ),
                   ),
                 ],
@@ -53,7 +52,7 @@ class _CalculatorScreen extends State<CalculatorScreen>{
                 ButtonCalcutor("C", AppColor.specialButtonColor, Colors.black, 1),
                 ButtonCalcutor("+/-", AppColor.specialButtonColor, Colors.black, 1),
                 ButtonCalcutor("%", AppColor.specialButtonColor, Colors.black, 1),
-                ButtonCalcutor("/", AppColor.secondaryButtonColor, Colors.black, 1),
+                ButtonCalcutor("/", AppColor.secondaryButtonColor, AppColor.blacktColor, 1),
               ],
             ),
             Row(
@@ -62,7 +61,7 @@ class _CalculatorScreen extends State<CalculatorScreen>{
                 ButtonCalcutor("7", AppColor.numbersButtonColor, AppColor.whiteColor, 1),
                 ButtonCalcutor("8", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
                 ButtonCalcutor("9", AppColor.numbersButtonColor,AppColor.whiteColor, 1),
-                ButtonCalcutor("X", AppColor.secondaryButtonColor,Colors.black, 1)
+                ButtonCalcutor("X", AppColor.secondaryButtonColor,AppColor.blacktColor, 1)
               ],
             ),
             Row(

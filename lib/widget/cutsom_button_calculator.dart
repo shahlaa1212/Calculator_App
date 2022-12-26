@@ -20,7 +20,11 @@ Widget ButtonCalcutor(
           shape: StadiumBorder(),
         ),
         onPressed: () {},
-        child: custom_title(btnText, colorNumber, 30.0)
+        child: custom_title(
+            btnText: btnText,
+            colorNumber: colorNumber,
+            fontSize: 30.0
+        ),
       ),
     );
   }
@@ -35,7 +39,11 @@ Widget ButtonCalcutor(
         ),
         onPressed: () {
         },
-        child: custom_title(btnText, colorNumber, 30.0),
+        child: custom_title(
+            btnText: btnText,
+            colorNumber: colorNumber,
+            fontSize: 30.0
+        ),
       ),
     );
   }
