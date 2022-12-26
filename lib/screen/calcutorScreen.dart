@@ -1,6 +1,5 @@
 import 'package:calculator_app/utils/color.dart';
 import 'package:flutter/material.dart';
-
 import '../widget/cutsom_button_calculator.dart';
 
 class CalculatorScreen extends StatefulWidget{
@@ -13,8 +12,10 @@ class _CalculatorScreen extends State<CalculatorScreen>{
   String text = '0';
   double numOne = 0;
   double numTwo = 0;
+
   String result = '0';
   String finalResult = '0';
+
   String opr = '';
   String preOpr = '';
 
@@ -96,4 +97,100 @@ class _CalculatorScreen extends State<CalculatorScreen>{
     );
   }
 
+  void calculate(txtBtn){
+    if(txtBtn == 'C'){
+      text = '0';
+      numOne = 0;
+      numTwo = 0;
+
+      result = '0';
+      finalResult = '0';
+
+      opr = '';
+      preOpr = '';
+
+    } else if(opr == '=' && txtBtn == '='){
+
+      switch(preOpr){
+        case '+':
+         finalResult = add();
+         break;
+        case '-':
+         finalResult = sub();
+         break;
+        case '*':
+         finalResult = mul();
+         break;
+        case '/':
+         finalResult = div();
+         break;
+      }
+
+    } else if(txtBtn == '+' || txtBtn == '-' || txtBtn == '*' || txtBtn == '/'){
+       if (numOne == 0){
+         numOne = double.parse(result);
+       }
+       else {
+         numTwo = double.parse(result);
+       }
+
+       switch(opr){
+         case '+':
+           finalResult = add();
+           break;
+
+         case '-':
+           finalResult = sub();
+           break;
+
+         case 'x':
+           finalResult = mul();
+           break;
+
+         case '/':
+           finalResult = div();
+           break;
+
+       }
+
+       preOpr = opr;
+       opr = txtBtn;
+       result = '';
+    }
+
+    else {
+      result = result + txtBtn;
+      finalResult = result;
+    }
+
+    setState(() {
+          text = finalResult;
+    });
+  }
+
+  String add(){
+    result = (numOne + numTwo).toString();
+    numOne = double.parse(result);
+    return result;
+  }
+
+  String sub(){
+    result = (numOne - numTwo).toString();
+    numOne = double.parse(result);
+    return result;
+  }
+
+  String mul(){
+    result = (numOne * numTwo).toString();
+    numOne = double.parse(result);
+    return result;
+  }
+
+  String div(){
+    result = (numOne / numTwo).toString();
+    numOne = double.parse(result);
+    return result;
+  }
+
 }
+

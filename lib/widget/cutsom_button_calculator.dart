@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'custom_title.dart';
 
-Widget ButtonCalcutor(String btnText, Color color, Color colorNumber, int num) {
+Widget ButtonCalcutor(
+    String btnText,
+    Color color,
+    Color colorNumber,
+    int num,
+)
+{
   Container container;
 
   if (num == 0) {
@@ -13,13 +20,7 @@ Widget ButtonCalcutor(String btnText, Color color, Color colorNumber, int num) {
           shape: StadiumBorder(),
         ),
         onPressed: () {},
-        child: Text(
-          btnText,
-          style: TextStyle(
-            fontSize: 30,
-            color: colorNumber,
-          ),
-        ),
+        child: custom_title(btnText, colorNumber, 30.0)
       ),
     );
   }
@@ -32,17 +33,12 @@ Widget ButtonCalcutor(String btnText, Color color, Color colorNumber, int num) {
           padding: EdgeInsets.all(15),
           shape: CircleBorder(),
         ),
-        onPressed: () {},
-        child: Text(
-          btnText,
-          style: TextStyle(
-            fontSize: 30,
-            color: colorNumber,
-          ),
-        ),
+        onPressed: () {
+        },
+        child: custom_title(btnText, colorNumber, 30.0),
       ),
     );
   }
   return container;
-
 }
+
